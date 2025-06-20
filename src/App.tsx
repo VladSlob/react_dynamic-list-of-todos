@@ -72,11 +72,7 @@ export const App: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      {selectedTodoId && (
-        <TodoModal
-          todos={todos}
           selectedTodoId={selectedTodoId}
           onClose={() => setSelectedTodoId(null)}
         />
