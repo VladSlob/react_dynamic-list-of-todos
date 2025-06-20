@@ -23,10 +23,6 @@ export const App: React.FC = () => {
     let matchesStatus = true;
 
     if (statusFilter === 'active') {
-      matchesStatus = todo.completed === false;
-    } else if (statusFilter === 'completed') {
-      matchesStatus = todo.completed === true;
-    }
 
     let matchesSearch = true;
 
