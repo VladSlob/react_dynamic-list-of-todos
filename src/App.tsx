@@ -23,6 +23,10 @@ export const App: React.FC = () => {
     let matchesStatus = true;
 
     if (statusFilter === 'active') {
+      matchesStatus = todo.completed === false;
+    } else if (statusFilter === 'completed') {
+      matchesStatus = todo.completed === true;
+    }
 
     let matchesSearch = true;
 
@@ -72,7 +76,11 @@ export const App: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
 
+      {selectedTodoId && (
+        <TodoModal
+          todos={todos}
           selectedTodoId={selectedTodoId}
           onClose={() => setSelectedTodoId(null)}
         />
